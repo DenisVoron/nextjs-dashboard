@@ -86,8 +86,19 @@ export default function LoginForm() {
 function LoginButton() {
   const { pending } = useFormStatus();
 
+  const handleClick = (event: { preventDefault(): void }) => {
+    if (pending) {
+      event.preventDefault();
+    }
+  };
+
   return (
-    <Button className="mt-4 w-full" aria-disabled={pending}>
+    <Button
+      type="submit"
+      className="mt-4 w-full"
+      aria-disabled={pending}
+      onClick={handleClick}
+    >
       Log in <ArrowRightIcon className="ml-auto h-5 w-5 text-gray-50" />
     </Button>
   );
