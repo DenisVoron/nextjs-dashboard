@@ -8,6 +8,11 @@ import RevenueChartSkeleton, {
   CardsSkeleton,
   LatestInvoicesSkeleton,
 } from '../../ui/skeletons';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Dashbord Page',
+};
 
 export default async function Page() {
   return (
