@@ -12,6 +12,11 @@ import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Dashbord Page',
+  description: 'This is a good app for controlling expenses',
+  generator: 'Acme money',
+  applicationName: 'Acme money',
+  referrer: 'origin-when-cross-origin',
+  keywords: ['Next.js', 'React', 'JavaScript'],
 };
 
 export default async function Page() {
